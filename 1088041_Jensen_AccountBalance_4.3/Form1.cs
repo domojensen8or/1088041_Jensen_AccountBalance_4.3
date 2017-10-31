@@ -16,10 +16,22 @@ namespace _1088041_Jensen_AccountBalance_4._3
         {
             InitializeComponent();
         }
-
+        private bool ValidateTextInput()
+        {
+            if (String.IsNullOrEmpty(textBoxTransactionAmount.Text))
+            {
+                MessageBox.Show("Enter transaction amount. ");
+                return false;
+            }
+            
+            return true;
+        }
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-
+            if(!ValidateTextInput())
+            {
+                return;
+            }
         }
     }
 }
