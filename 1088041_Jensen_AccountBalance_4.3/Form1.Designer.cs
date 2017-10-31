@@ -129,6 +129,7 @@
             // 
             this.textBoxBalance.Location = new System.Drawing.Point(240, 342);
             this.textBoxBalance.Name = "textBoxBalance";
+            this.textBoxBalance.ReadOnly = true;
             this.textBoxBalance.Size = new System.Drawing.Size(196, 31);
             this.textBoxBalance.TabIndex = 8;
             // 

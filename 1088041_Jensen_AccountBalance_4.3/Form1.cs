@@ -32,6 +32,27 @@ namespace _1088041_Jensen_AccountBalance_4._3
             {
                 return;
             }
+
+            decimal transactionAmount;
+            decimal totalAmount = 0;
+
+            if (!decimal.TryParse(textBoxTransactionAmount.Text, out transactionAmount))
+            {
+                MessageBox.Show("Fix transaction amount");
+                textBoxTransactionAmount.Text = String.Empty;
+                return;
+            }
+            if (radioButtonServiceCharge.Checked ||
+                radioButtonDeposit.Checked)
+            {
+                totalAmount -= transactionAmount;
+            } 
+            else
+            {
+                totalAmount += transactionAmount;
+            }
+
+            textBoxBalance.Text = transactionAmount.ToString("C");
         }
     }
 }
